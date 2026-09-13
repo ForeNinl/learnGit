@@ -1,0 +1,38 @@
+在 hello 文件夹里新建：
+
+① hello.c
+
+写：
+
+#include <stdio.h>
+
+int main(void)
+{
+    printf("Hello World!\n");
+    return 0;
+}
+
+② CMakeLists.txt
+
+写：
+
+cmake_minimum_required(VERSION 3.0)
+
+project(HELLO C)
+
+add_executable(hello hello.c)
+
+保存。
+
+然后终端只负责执行构建命令：
+
+cd ~/hello
+mkdir build
+cd build
+cmake ..
+make
+./hello
+
+最终：
+
+Hello World!
